@@ -27,11 +27,28 @@
             <option value="Lazer">Lazer</option>
             <option value="Educação">Educação</option>
             <option value="Outros">Outros</option>
-
+        </select><br><br>
         <button type="submit">Adicionar Gasto</button>
         <button type="reset">Limpar</button>
-        </select><br><br>
     </form>
+</div>
+<div class="gastos-lista">
+    <h2>Lista de Gastos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <tbody id="gastos-tbody">
+        </tbody>
+    </table>
+</div>
+<div class="total-gastos">
+    <h2>Total de Gastos</h2>
+    <p id="total-gastos">R$ 0,00</p>
 </div>
 
 <body>
