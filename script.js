@@ -58,3 +58,37 @@ function atualizarTotal() {
     // Atualiza o elemento que exibe o total
     document.getElementById('total-gasto').innerText = `Total Gasto: R$ ${total.toFixed(2).replace('.', ',')}`;
 }
+// Função para adicionar um gasto à tabela
+function adicionar() {
+    const descricao = document.getElementById('descricao').value;
+    const valor = document.getElementById('valor').value;
+    const categoria = document.getElementById('categoria').value;
+
+    if (descricao && valor && categoria) {
+        const tbody = document.getElementById('gastos-tbody');
+        const novaLinha = document.createElement('tr');
+
+        // Verifica se o valor é maior que 100 para aplicar a classe
+        const valorNumerico = parseFloat(valor);
+        const classeValor = valorNumerico > 100 ? 'valor-alto' : '';
+
+        novaLinha.innerHTML = `
+            <td>${descricao}</td>
+            <td class="${classeValor}">R$ ${valorNumerico.toFixed(2).replace('.', ',')}</td>
+            <td>${categoria}</td>
+            <td><button class="btn-excluir" onclick="excluirGasto(this)">Excluir</button></td>
+        `;
+
+        tbody.appendChild(novaLinha);
+
+        // Limpa os campos do formulário
+        document.getElementById('descricao').value = '';
+        document.getElementById('valor').value = '';
+        document.getElementById('categoria').value = 'Alimentação';
+
+        // Atualiza o total gasto
+        atualizarTotal();
+    } else {
+        alert('Por favor, preencha todos os campos!');
+    }
+}
