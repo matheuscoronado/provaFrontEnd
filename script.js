@@ -108,3 +108,11 @@ function limparTabela() {
     // Atualiza o total gasto
     atualizarTotal();
 }
+// Função para somar os valores
+function somarValores(){
+    let soma = 0; // Cria variável para armazenar a soma
+    for(let i = 0; i <= dadosLista.length-1; i++){
+        soma += parseFloat(dadosLista[i]); // Adiciona o valor do campo de texto no array
+    }
+    document.getElementById("soma").innerHTML = "Soma: " + soma; // Mostra a soma na tela
+}
