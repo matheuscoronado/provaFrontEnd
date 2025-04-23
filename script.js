@@ -92,3 +92,11 @@ function adicionar() {
         alert('Por favor, preencha todos os campos!');
     }
 }
+// Função para excluir um gasto específico
+function excluirGasto(botao) {
+    const linha = botao.parentNode.parentNode; // Obtém a linha correspondente ao botão
+    linha.remove(); // Remove a linha da tabela
+
+    // Atualiza o total gasto
+    atualizarTotal();
+}
