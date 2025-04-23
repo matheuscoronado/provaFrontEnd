@@ -1,6 +1,10 @@
-body, h1, p{
+/* Estilo geral */
+body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    font-family: MontSerrat;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 h1{
     font-size: 2.5rem;
@@ -14,43 +18,85 @@ p{
     text-align: center;
     margin-top: 10px;
 }
-.gastos-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #f0f0f0;
+
+/* Cabeçalho */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
-button{
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Formulário */
+.gastos-form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gastos-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #4CAF50;
+}
+
+.gastos-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.gastos-form input,
+.gastos-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.gastos-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     padding: 10px 20px;
     font-size: 1rem;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-button:hover{
-    background-color: #0056b3;
+
+.gastos-form button:hover {
+    background-color: #45a049;
 }
-table{
-    width: 80%;
+
+/* Tabela */
+.gastos-lista {
+    max-width: 800px;
     margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gastos-lista h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #4CAF50;
+}
+
+table {
+    width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
-th, td{
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-th{
-    background-color: #007BFF;
-    color: white;
-}
-td{
-    background-color: #f9f9f9;
-}
-
-
