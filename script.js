@@ -100,3 +100,11 @@ function excluirGasto(botao) {
     // Atualiza o total gasto
     atualizarTotal();
 }
+// Função para limpar a tabela
+function limparTabela() {
+    const tbody = document.getElementById('gastos-tbody');
+    tbody.innerHTML = ''; // Remove todas as linhas da tabela
+
+    // Atualiza o total gasto
+    atualizarTotal();
+}
