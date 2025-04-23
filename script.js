@@ -42,3 +42,19 @@ function criaLista(){
         document.getElementById("tabela").innerHTML = tabela;
     }
 }
+// Função para calcular e exibir o total gasto
+function atualizarTotal() {
+    const tbody = document.getElementById('gastos-tbody');
+    const linhas = tbody.getElementsByTagName('tr');
+    let total = 0;
+
+    // Itera pelas linhas da tabela e soma os valores
+    for (let i = 0; i < linhas.length; i++) {
+        const valorCelula = linhas[i].getElementsByTagName('td')[1].innerText; // Obtém o valor da segunda célula
+        const valorNumerico = parseFloat(valorCelula.replace('R$', '').replace(',', '.')); // Remove "R$" e converte para número
+        total += valorNumerico;
+    }
+
+    // Atualiza o elemento que exibe o total
+    document.getElementById('total-gasto').innerText = `Total Gasto: R$ ${total.toFixed(2).replace('.', ',')}`;
+}
